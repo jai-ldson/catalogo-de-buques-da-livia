@@ -1,0 +1,1491 @@
+<html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Buquês da Lívia Presentes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f3e8ff 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .admin-panel { display: none; }
+        .admin-mode .admin-panel { display: block; }
+        .admin-mode .client-only { display: none; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; }
+        .modal.active { display: flex; align-items: center; justify-content: center; }
+        .bouquet-image { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; }
+        .touch-manipulation { touch-action: manipulation; }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .animate-spin { animation: spin 1s linear infinite; }
+        @media (max-width: 768px) {
+            .bouquet-image { height: 180px; }
+            .card-hover:hover { transform: none; }
+            .card-hover:active { transform: scale(0.98); }
+            body { -webkit-text-size-adjust: 100%; }
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.right-4{right:1rem}.top-0{top:0px}.top-4{top:1rem}.left-4{left:1rem}.z-10{z-index:10}.z-50{z-index:50}.mx-4{margin-left:1rem;margin-right:1rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-2{margin-right:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mr-1{margin-right:0.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-32{height:8rem}.h-96{height:24rem}.h-48{height:12rem}.max-h-\[80vh\]{max-height:80vh}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.min-h-\[44px\]{min-height:44px}.w-10{width:2.5rem}.w-full{width:100%}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.cursor-pointer{cursor:pointer}.touch-manipulation{touch-action:manipulation}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-8{gap:2rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-pink-200{--tw-border-opacity:1;border-color:rgb(251 207 232 / var(--tw-border-opacity, 1))}.border-yellow-200{--tw-border-opacity:1;border-color:rgb(254 240 138 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-black\/50{background-color:rgb(0 0 0 / 0.5)}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-pink-100{--tw-bg-opacity:1;background-color:rgb(252 231 243 / var(--tw-bg-opacity, 1))}.bg-pink-50{--tw-bg-opacity:1;background-color:rgb(253 242 248 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/70{background-color:rgb(255 255 255 / 0.7)}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-500{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(59 130 246 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-green-400{--tw-gradient-from:#4ade80 var(--tw-gradient-from-position);--tw-gradient-to:rgb(74 222 128 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-green-500{--tw-gradient-from:#22c55e var(--tw-gradient-from-position);--tw-gradient-to:rgb(34 197 94 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-pink-400{--tw-gradient-from:#f472b6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(244 114 182 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-pink-500{--tw-gradient-from:#ec4899 var(--tw-gradient-from-position);--tw-gradient-to:rgb(236 72 153 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-500{--tw-gradient-from:#a855f7 var(--tw-gradient-from-position);--tw-gradient-to:rgb(168 85 247 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-pink-100{--tw-gradient-from:#fce7f3 var(--tw-gradient-from-position);--tw-gradient-to:rgb(252 231 243 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-blue-600{--tw-gradient-to:#2563eb var(--tw-gradient-to-position)}.to-green-500{--tw-gradient-to:#22c55e var(--tw-gradient-to-position)}.to-green-600{--tw-gradient-to:#16a34a var(--tw-gradient-to-position)}.to-purple-500{--tw-gradient-to:#a855f7 var(--tw-gradient-to-position)}.to-purple-600{--tw-gradient-to:#9333ea var(--tw-gradient-to-position)}.to-purple-100{--tw-gradient-to:#f3e8ff var(--tw-gradient-to-position)}.object-contain{object-fit:contain}.object-cover{object-fit:cover}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-6xl{font-size:3.75rem;line-height:1}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-green-50{--tw-text-opacity:1;color:rgb(240 253 244 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-pink-700{--tw-text-opacity:1;color:rgb(190 24 93 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-600{--tw-text-opacity:1;color:rgb(202 138 4 / var(--tw-text-opacity, 1))}.text-yellow-700{--tw-text-opacity:1;color:rgb(161 98 7 / var(--tw-text-opacity, 1))}.text-yellow-800{--tw-text-opacity:1;color:rgb(133 77 14 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.file\:mr-4::file-selector-button{margin-right:1rem}.file\:rounded-lg::file-selector-button{border-radius:0.5rem}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-pink-50::file-selector-button{--tw-bg-opacity:1;background-color:rgb(253 242 248 / var(--tw-bg-opacity, 1))}.file\:px-4::file-selector-button{padding-left:1rem;padding-right:1rem}.file\:py-2::file-selector-button{padding-top:0.5rem;padding-bottom:0.5rem}.file\:text-pink-700::file-selector-button{--tw-text-opacity:1;color:rgb(190 24 93 / var(--tw-text-opacity, 1))}.hover\:bg-black\/70:hover{background-color:rgb(0 0 0 / 0.7)}.hover\:bg-blue-600:hover{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-green-50:hover{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.hover\:bg-green-600:hover{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.hover\:bg-pink-200:hover{--tw-bg-opacity:1;background-color:rgb(251 207 232 / var(--tw-bg-opacity, 1))}.hover\:bg-purple-200:hover{--tw-bg-opacity:1;background-color:rgb(233 213 255 / var(--tw-bg-opacity, 1))}.hover\:bg-red-600:hover{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.hover\:from-blue-600:hover{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgb(37 99 235 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-green-600:hover{--tw-gradient-from:#16a34a var(--tw-gradient-from-position);--tw-gradient-to:rgb(22 163 74 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-pink-600:hover{--tw-gradient-from:#db2777 var(--tw-gradient-from-position);--tw-gradient-to:rgb(219 39 119 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-purple-600:hover{--tw-gradient-from:#9333ea var(--tw-gradient-from-position);--tw-gradient-to:rgb(147 51 234 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-blue-700:hover{--tw-gradient-to:#1d4ed8 var(--tw-gradient-to-position)}.hover\:to-green-700:hover{--tw-gradient-to:#15803d var(--tw-gradient-to-position)}.hover\:to-purple-600:hover{--tw-gradient-to:#9333ea var(--tw-gradient-to-position)}.hover\:to-purple-700:hover{--tw-gradient-to:#7e22ce var(--tw-gradient-to-position)}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.hover\:opacity-90:hover{opacity:0.9}.hover\:file\:bg-pink-100::file-selector-button:hover{--tw-bg-opacity:1;background-color:rgb(252 231 243 / var(--tw-bg-opacity, 1))}.focus\:border-pink-400:focus{--tw-border-opacity:1;border-color:rgb(244 114 182 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-pink-200:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(251 207 232 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}</style></head>
+<body class="gradient-bg min-h-screen font-inter admin-mode">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center">
+                        <span class="text-xl">🌸</span>
+                    </div>
+                    <div>
+                        <h1 class="font-playfair text-lg md:text-2xl font-bold text-gray-800">Buquês da Lívia</h1>
+                        <p class="text-xs md:text-sm text-gray-600">Presentes especiais</p>
+                    </div>
+                </div>
+                
+                <!-- Admin Toggle -->
+                <div class="flex items-center space-x-2">
+                    <button id="adminToggle" class="px-3 py-2 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 transition-colors text-xs font-medium min-h-[44px] touch-manipulation">
+                        Admin
+                    </button>
+                    <button id="clientModeBtn" class="px-3 py-2 bg-pink-100 text-pink-700 rounded-lg hover:bg-pink-200 transition-colors text-xs font-medium admin-panel min-h-[44px] touch-manipulation">
+                        Cliente
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel bg-white/90 backdrop-blur-sm border-b border-pink-200">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <h2 class="font-playfair text-xl font-semibold text-gray-800">Painel Administrativo</h2>
+                <div class="flex flex-wrap gap-2">
+                    <button id="addBouquetBtn" class="px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg hover:from-pink-600 hover:to-purple-600 transition-all font-medium text-sm">
+                        + Adicionar Buquê
+                    </button>
+                    <button id="viewOrdersBtn" class="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all font-medium text-sm">
+                        📋 Pedidos do Dia
+                    </button>
+                    <button id="generateCodeBtn" class="px-4 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg hover:from-green-600 hover:to-green-700 transition-all font-medium text-sm">
+                        💾 Gerar Código
+                    </button>
+                    <button id="shareBtn" class="px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:from-purple-600 hover:to-purple-700 transition-all font-medium text-sm">
+                        🔗 Compartilhar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search and Filters -->
+    <div class="max-w-6xl mx-auto px-4 py-6">
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 mb-8 shadow-lg">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1">
+                    <input type="text" id="searchInput" placeholder="Buscar buquês..." class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-200">
+                </div>
+                <select id="priceFilter" class="px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none">
+                    <option value="">Todos os preços</option>
+                    <option value="0-100">Até R$ 100</option>
+                    <option value="100-200">R$ 100 - R$ 200</option>
+                    <option value="200+">Acima de R$ 200</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Bouquets Grid -->
+        <div id="bouquetsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg card-hover overflow-hidden">
+                    <div class="relative">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDAiIHI9IjMwIiBmaWxsPSIjZGMxNjI2Ii8+CjxjaXJjbGUgY3g9IjE1MCIgY3k9IjEyMCIgcj0iMjUiIGZpbGw9IiNlZjQ0NDQiLz4KPGNpcmNsZSBjeD0iMjUwIiBjeT0iMTIwIiByPSIyNSIgZmlsbD0iI2VmNDQ0NCIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIxNTAiIHI9IjIwIiBmaWxsPSIjZjg3MTcxIi8+CjxjaXJjbGUgY3g9IjIyMCIgY3k9IjE1MCIgcj0iMjAiIGZpbGw9IiNmODcxNzEiLz4KPHJlY3QgeD0iMTkwIiB5PSIxODAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzE2YTM0YSIvPgo8cGF0aCBkPSJNMTcwIDIyMEwyMzAgMjIwTDIyMCAyNDBMMTgwIDI0MFoiIGZpbGw9IiNmZGU2OGEiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZjJmOCIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmY2U3ZjMiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4=" alt="Rosas Vermelhas Clássicas" class="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openPhotoModal('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDAiIHI9IjMwIiBmaWxsPSIjZGMxNjI2Ii8+CjxjaXJjbGUgY3g9IjE1MCIgY3k9IjEyMCIgcj0iMjUiIGZpbGw9IiNlZjQ0NDQiLz4KPGNpcmNsZSBjeD0iMjUwIiBjeT0iMTIwIiByPSIyNSIgZmlsbD0iI2VmNDQ0NCIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIxNTAiIHI9IjIwIiBmaWxsPSIjZjg3MTcxIi8+CjxjaXJjbGUgY3g9IjIyMCIgY3k9IjE1MCIgcj0iMjAiIGZpbGw9IiNmODcxNzEiLz4KPHJlY3QgeD0iMTkwIiB5PSIxODAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzE2YTM0YSIvPgo8cGF0aCBkPSJNMTcwIDIyMEwyMzAgMjIwTDIyMCAyNDBMMTgwIDI0MFoiIGZpbGw9IiNmZGU2OGEiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZjJmOCIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmY2U3ZjMiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4=', 'Rosas Vermelhas Clássicas', '89.9', '🌹')">
+                        
+                            <div class="absolute top-4 right-4 flex space-x-2">
+                                <button onclick="openEditModal({&quot;id&quot;:1,&quot;name&quot;:&quot;Rosas Vermelhas Clássicas&quot;,&quot;description&quot;:&quot;Buquê elegante com 12 rosas vermelhas frescas, embalagem sofisticada em papel kraft e laço de cetim.&quot;,&quot;price&quot;:89.9,&quot;emoji&quot;:&quot;🌹&quot;,&quot;available&quot;:true,&quot;photo&quot;:&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDAiIHI9IjMwIiBmaWxsPSIjZGMxNjI2Ii8+CjxjaXJjbGUgY3g9IjE1MCIgY3k9IjEyMCIgcj0iMjUiIGZpbGw9IiNlZjQ0NDQiLz4KPGNpcmNsZSBjeD0iMjUwIiBjeT0iMTIwIiByPSIyNSIgZmlsbD0iI2VmNDQ0NCIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIxNTAiIHI9IjIwIiBmaWxsPSIjZjg3MTcxIi8+CjxjaXJjbGUgY3g9IjIyMCIgY3k9IjE1MCIgcj0iMjAiIGZpbGw9IiNmODcxNzEiLz4KPHJlY3QgeD0iMTkwIiB5PSIxODAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzE2YTM0YSIvPgo8cGF0aCBkPSJNMTcwIDIyMEwyMzAgMjIwTDIyMCAyNDBMMTgwIDI0MFoiIGZpbGw9IiNmZGU2OGEiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZjJmOCIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmY2U3ZjMiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4=&quot;})" class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                                    ✏️
+                                </button>
+                                <button onclick="deleteBouquet(1)" class="p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                                    🗑️
+                                </button>
+                            </div>
+                        
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-2">Rosas Vermelhas Clássicas</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Buquê elegante com 12 rosas vermelhas frescas, embalagem sofisticada em papel kraft e laço de cetim.</p>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-2xl text-purple-600">R$ 89.90</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg card-hover overflow-hidden">
+                    <div class="relative">
+                        <div class="w-full h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+                                <span class="text-6xl">🌻</span>
+                            </div>
+                        
+                            <div class="absolute top-4 right-4 flex space-x-2">
+                                <button onclick="openEditModal({&quot;id&quot;:2,&quot;name&quot;:&quot;Girassóis Radiantes&quot;,&quot;description&quot;:&quot;Alegre arranjo com 8 girassóis vibrantes, folhagens verdes e embalagem rústica charmosa.&quot;,&quot;price&quot;:75.5,&quot;emoji&quot;:&quot;🌻&quot;,&quot;available&quot;:true})" class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                                    ✏️
+                                </button>
+                                <button onclick="deleteBouquet(2)" class="p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                                    🗑️
+                                </button>
+                            </div>
+                        
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-2">Girassóis Radiantes</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Alegre arranjo com 8 girassóis vibrantes, folhagens verdes e embalagem rústica charmosa.</p>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-2xl text-purple-600">R$ 75.50</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg card-hover overflow-hidden">
+                    <div class="relative">
+                        <div class="w-full h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+                                <span class="text-6xl">🌷</span>
+                            </div>
+                        
+                            <div class="absolute top-4 right-4 flex space-x-2">
+                                <button onclick="openEditModal({&quot;id&quot;:3,&quot;name&quot;:&quot;Tulipas Primavera&quot;,&quot;description&quot;:&quot;Delicado buquê com 15 tulipas coloridas, perfeito para ocasiões especiais e decoração.&quot;,&quot;price&quot;:120,&quot;emoji&quot;:&quot;🌷&quot;,&quot;available&quot;:true})" class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                                    ✏️
+                                </button>
+                                <button onclick="deleteBouquet(3)" class="p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                                    🗑️
+                                </button>
+                            </div>
+                        
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-2">Tulipas Primavera</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Delicado buquê com 15 tulipas coloridas, perfeito para ocasiões especiais e decoração.</p>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-2xl text-purple-600">R$ 120.00</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg card-hover overflow-hidden">
+                    <div class="relative">
+                        <div class="w-full h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+                                <span class="text-6xl">🌺</span>
+                            </div>
+                        
+                            <div class="absolute top-4 right-4 flex space-x-2">
+                                <button onclick="openEditModal({&quot;id&quot;:4,&quot;name&quot;:&quot;Mix Tropical&quot;,&quot;description&quot;:&quot;Exótico arranjo com flores tropicais, antúrios, helicônias e folhagens exuberantes.&quot;,&quot;price&quot;:150,&quot;emoji&quot;:&quot;🌺&quot;,&quot;available&quot;:true})" class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                                    ✏️
+                                </button>
+                                <button onclick="deleteBouquet(4)" class="p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                                    🗑️
+                                </button>
+                            </div>
+                        
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-2">Mix Tropical</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Exótico arranjo com flores tropicais, antúrios, helicônias e folhagens exuberantes.</p>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-2xl text-purple-600">R$ 150.00</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg card-hover overflow-hidden">
+                    <div class="relative">
+                        <div class="w-full h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+                                <span class="text-6xl">💐</span>
+                            </div>
+                        
+                            <div class="absolute top-4 right-4 flex space-x-2">
+                                <button onclick="openEditModal({&quot;id&quot;:5,&quot;name&quot;:&quot;Buquê da Noiva&quot;,&quot;description&quot;:&quot;Sofisticado arranjo branco com rosas, lírios e gypsophila, ideal para casamentos.&quot;,&quot;price&quot;:200,&quot;emoji&quot;:&quot;💐&quot;,&quot;available&quot;:true})" class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                                    ✏️
+                                </button>
+                                <button onclick="deleteBouquet(5)" class="p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                                    🗑️
+                                </button>
+                            </div>
+                        
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-2">Buquê da Noiva</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Sofisticado arranjo branco com rosas, lírios e gypsophila, ideal para casamentos.</p>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-2xl text-purple-600">R$ 200.00</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg card-hover overflow-hidden">
+                    <div class="relative">
+                        <div class="w-full h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+                                <span class="text-6xl">🌸</span>
+                            </div>
+                        
+                            <div class="absolute top-4 right-4 flex space-x-2">
+                                <button onclick="openEditModal({&quot;id&quot;:6,&quot;name&quot;:&quot;Flores do Campo&quot;,&quot;description&quot;:&quot;Charmoso buquê campestre com margaridas, lavandas e flores silvestres naturais.&quot;,&quot;price&quot;:65,&quot;emoji&quot;:&quot;🌸&quot;,&quot;available&quot;:true})" class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                                    ✏️
+                                </button>
+                                <button onclick="deleteBouquet(6)" class="p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                                    🗑️
+                                </button>
+                            </div>
+                        
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-2">Flores do Campo</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Charmoso buquê campestre com margaridas, lavandas e flores silvestres naturais.</p>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-2xl text-purple-600">R$ 65.00</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- WhatsApp Contact Section -->
+    <div class="client-only max-w-6xl mx-auto px-4 py-8">
+        <div class="bg-gradient-to-r from-green-400 to-green-500 rounded-2xl p-8 text-center text-white shadow-xl">
+            <h3 class="font-playfair text-2xl font-bold mb-4">Faça seu pedido pelo WhatsApp</h3>
+            <p class="mb-6 text-green-50">Entre em contato conosco para personalizar seu buquê especial</p>
+            <a href="https://wa.me/+5566992818222?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20de%20buqu%C3%AA%20%F0%9F%8C%B8" target="_blank" onclick="openWhatsAppLink(this.href); return false;" class="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-xl font-semibold hover:bg-green-50 transition-colors">
+                <span class="mr-2">📱</span>
+                Conversar no WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal for Add/Edit Bouquet -->
+    <div id="bouquetModal" class="modal">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl">
+            <h3 id="modalTitle" class="font-playfair text-2xl font-bold mb-6 text-gray-800">Adicionar Buquê</h3>
+            <form id="bouquetForm">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Nome do Buquê</label>
+                        <input type="text" id="bouquetName" required="" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Descrição</label>
+                        <textarea id="bouquetDescription" rows="3" required="" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Preço (R$)</label>
+                        <input type="number" id="bouquetPrice" required="" step="0.01" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Foto do Buquê</label>
+                        <input type="file" id="bouquetPhoto" accept="image/*" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-pink-50 file:text-pink-700 hover:file:bg-pink-100">
+                        <div id="photoPreview" class="mt-3 hidden">
+                            <img id="previewImage" class="w-full h-32 object-cover rounded-xl border-2 border-pink-200">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Emoji da Flor</label>
+                        <select id="bouquetEmoji" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none">
+                            <option value="🌹">🌹 Rosas</option>
+                            <option value="🌻">🌻 Girassóis</option>
+                            <option value="🌷">🌷 Tulipas</option>
+                            <option value="🌺">🌺 Hibisco</option>
+                            <option value="🌸">🌸 Cerejeira</option>
+                            <option value="💐">💐 Misto</option>
+                            <option value="🏵️">🏵️ Especial</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex space-x-4 mt-8">
+                    <button type="button" id="cancelBtn" class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="flex-1 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-xl hover:from-pink-600 hover:to-purple-600 transition-all">
+                        Salvar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Order Form -->
+    <div id="orderModal" class="modal">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl max-h-[90vh] overflow-y-auto">
+            <h3 class="font-playfair text-2xl font-bold mb-6 text-gray-800">Fazer Pedido</h3>
+            <form id="orderForm">
+                <div class="space-y-4">
+                    <div id="selectedBouquet" class="bg-pink-50 p-4 rounded-xl mb-4">
+                        <!-- Selected bouquet info will be inserted here -->
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Seu Nome *</label>
+                        <input type="text" id="customerName" required="" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">WhatsApp/Telefone *</label>
+                        <input type="tel" id="customerPhone" required="" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none" placeholder="(66) 99999-9999">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Forma de Entrega *</label>
+                        <select id="deliveryType" required="" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none">
+                            <option value="">Selecione...</option>
+                            <option value="retirada">🏪 Retirada na Loja (Grátis)</option>
+                            <option value="entrega">🚚 Entrega (+R$ 4,00)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Delivery Fee Notice -->
+                    <div id="deliveryFeeNotice" class="hidden bg-yellow-50 border border-yellow-200 rounded-xl p-4">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-yellow-600">💰</span>
+                            <div>
+                                <p class="text-sm font-medium text-yellow-800">Taxa de Entrega</p>
+                                <p class="text-xs text-yellow-700">Será adicionada uma taxa de R$ 4,00 para entregas</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="addressSection" class="hidden">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Endereço para Entrega *</label>
+                        <textarea id="deliveryAddress" rows="3" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none" placeholder="Rua, número, bairro, cidade..."></textarea>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Data Desejada</label>
+                        <input type="date" id="deliveryDate" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Observações</label>
+                        <textarea id="orderNotes" rows="3" class="w-full px-4 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none" placeholder="Informações adicionais, dedicatória, etc..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-4 mt-8">
+                    <button type="button" id="cancelOrderBtn" class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="flex-1 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all">
+                        📱 Enviar Pedido
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Orders Management -->
+    <div id="ordersModal" class="modal">
+        <div class="bg-white rounded-2xl p-8 max-w-4xl w-full mx-4 shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-playfair text-2xl font-bold text-gray-800">📋 Pedidos do Dia</h3>
+                <button id="closeOrdersBtn" class="p-2 text-gray-500 hover:text-gray-700">✕</button>
+            </div>
+            
+            <div id="ordersList" class="space-y-4">
+                <!-- Orders will be rendered here -->
+            </div>
+            
+            <div id="noOrders" class="text-center py-8 text-gray-500 hidden">
+                <span class="text-4xl mb-4 block">📝</span>
+                <p>Nenhum pedido hoje ainda!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Code Generation -->
+    <div id="codeModal" class="modal">
+        <div class="bg-white rounded-2xl p-8 max-w-4xl w-full mx-4 shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-playfair text-2xl font-bold text-gray-800">💾 Código Atualizado</h3>
+                <button id="closeCodeBtn" class="p-2 text-gray-500 hover:text-gray-700">✕</button>
+            </div>
+            
+            <div class="bg-gray-50 p-4 rounded-xl mb-4">
+                <p class="text-sm text-gray-600 mb-2">
+                    <strong>Como usar:</strong> Copie o código abaixo e salve em um arquivo .html para enviar aos clientes.
+                </p>
+                <div class="flex gap-2">
+                    <button id="copyCodeBtn" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-sm">
+                        📋 Copiar Código
+                    </button>
+                    <button id="downloadCodeBtn" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 text-sm">
+                        💾 Baixar Arquivo
+                    </button>
+                </div>
+            </div>
+            
+            <textarea id="generatedCode" class="w-full h-96 p-4 border border-gray-300 rounded-xl font-mono text-xs" readonly=""></textarea>
+        </div>
+    </div>
+
+    <!-- Modal for Photo Viewer -->
+    <div id="photoModal" class="modal">
+        <div class="relative max-w-4xl w-full mx-4">
+            <button id="closePhotoBtn" class="absolute top-4 right-4 z-10 p-3 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors">
+                ✕
+            </button>
+            <div class="bg-white rounded-2xl p-4 shadow-2xl">
+                <img id="photoModalImage" class="w-full max-h-[80vh] object-contain rounded-xl" alt="Foto do buquê">
+                <div id="photoModalInfo" class="mt-4 text-center">
+                    <!-- Photo info will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Sharing -->
+    <div id="shareModal" class="modal">
+        <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 shadow-2xl">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-playfair text-2xl font-bold text-gray-800">🔗 Compartilhar Catálogo</h3>
+                <button id="closeShareBtn" class="p-2 text-gray-500 hover:text-gray-700">✕</button>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Option 1: File Sharing -->
+                <div class="bg-blue-50 p-6 rounded-xl">
+                    <h4 class="font-semibold text-lg mb-3 flex items-center">
+                        <span class="mr-2">📁</span>
+                        Opção 1: Arquivo HTML
+                    </h4>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Baixe o arquivo HTML atualizado e envie por WhatsApp, email ou qualquer meio de sua preferência.
+                    </p>
+                    <div class="flex gap-2">
+                        <button id="downloadForShare" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-sm flex-1">
+                            💾 Baixar Arquivo
+                        </button>
+                        <button id="copyCodeForShare" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm flex-1">
+                            📋 Copiar Código
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Option 2: Online Hosting -->
+                <div class="bg-purple-50 p-6 rounded-xl">
+                    <h4 class="font-semibold text-lg mb-3 flex items-center">
+                        <span class="mr-2">🌐</span>
+                        Opção 2: Hospedagem Online
+                    </h4>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Para que qualquer pessoa acesse via link, você precisa hospedar o arquivo online. Sugestões gratuitas:
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg">
+                            <div>
+                                <strong>GitHub Pages</strong>
+                                <p class="text-gray-500">Gratuito e confiável</p>
+                            </div>
+                            <button onclick="window.open('https://pages.github.com', '_blank')" class="px-3 py-1 bg-gray-800 text-white rounded text-xs">
+                                Acessar
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg">
+                            <div>
+                                <strong>Netlify</strong>
+                                <p class="text-gray-500">Fácil de usar</p>
+                            </div>
+                            <button onclick="window.open('https://netlify.com', '_blank')" class="px-3 py-1 bg-green-600 text-white rounded text-xs">
+                                Acessar
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg">
+                            <div>
+                                <strong>Vercel</strong>
+                                <p class="text-gray-500">Rápido e simples</p>
+                            </div>
+                            <button onclick="window.open('https://vercel.com', '_blank')" class="px-3 py-1 bg-black text-white rounded text-xs">
+                                Acessar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option 3: Instructions -->
+                <div class="bg-green-50 p-6 rounded-xl">
+                    <h4 class="font-semibold text-lg mb-3 flex items-center">
+                        <span class="mr-2">📱</span>
+                        Como Compartilhar por WhatsApp
+                    </h4>
+                    <ol class="text-sm text-gray-600 space-y-2">
+                        <li><strong>1.</strong> Clique em "Baixar Arquivo" acima</li>
+                        <li><strong>2.</strong> Abra o WhatsApp</li>
+                        <li><strong>3.</strong> Escolha o contato ou grupo</li>
+                        <li><strong>4.</strong> Clique no 📎 (anexar)</li>
+                        <li><strong>5.</strong> Selecione "Documento"</li>
+                        <li><strong>6.</strong> Escolha o arquivo baixado</li>
+                        <li><strong>7.</strong> Envie com a mensagem: "Aqui está nosso catálogo de buquês! Abra o arquivo no navegador para ver."</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initial bouquet data
+        let bouquets = [
+          {
+                    "id": 1,
+                    "name": "Rosas Vermelhas Clássicas",
+                    "description": "Buquê elegante com 12 rosas vermelhas frescas, embalagem sofisticada em papel kraft e laço de cetim.",
+                    "price": 89.9,
+                    "emoji": "🌹",
+                    "available": true,
+                    "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDAiIHI9IjMwIiBmaWxsPSIjZGMxNjI2Ii8+CjxjaXJjbGUgY3g9IjE1MCIgY3k9IjEyMCIgcj0iMjUiIGZpbGw9IiNlZjQ0NDQiLz4KPGNpcmNsZSBjeD0iMjUwIiBjeT0iMTIwIiByPSIyNSIgZmlsbD0iI2VmNDQ0NCIvPgo8Y2lyY2xlIGN4PSIxODAiIGN5PSIxNTAiIHI9IjIwIiBmaWxsPSIjZjg3MTcxIi8+CjxjaXJjbGUgY3g9IjIyMCIgY3k9IjE1MCIgcj0iMjAiIGZpbGw9IiNmODcxNzEiLz4KPHJlY3QgeD0iMTkwIiB5PSIxODAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzE2YTM0YSIvPgo8cGF0aCBkPSJNMTcwIDIyMEwyMzAgMjIwTDIyMCAyNDBMMTgwIDI0MFoiIGZpbGw9IiNmZGU2OGEiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZjJmOCIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmY2U3ZjMiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4="
+          },
+          {
+                    "id": 2,
+                    "name": "Girassóis Radiantes",
+                    "description": "Alegre arranjo com 8 girassóis vibrantes, folhagens verdes e embalagem rústica charmosa.",
+                    "price": 75.5,
+                    "emoji": "🌻",
+                    "available": true
+          },
+          {
+                    "id": 3,
+                    "name": "Tulipas Primavera",
+                    "description": "Delicado buquê com 15 tulipas coloridas, perfeito para ocasiões especiais e decoração.",
+                    "price": 120,
+                    "emoji": "🌷",
+                    "available": true
+          },
+          {
+                    "id": 4,
+                    "name": "Mix Tropical",
+                    "description": "Exótico arranjo com flores tropicais, antúrios, helicônias e folhagens exuberantes.",
+                    "price": 150,
+                    "emoji": "🌺",
+                    "available": true
+          },
+          {
+                    "id": 5,
+                    "name": "Buquê da Noiva",
+                    "description": "Sofisticado arranjo branco com rosas, lírios e gypsophila, ideal para casamentos.",
+                    "price": 200,
+                    "emoji": "💐",
+                    "available": true
+          },
+          {
+                    "id": 6,
+                    "name": "Flores do Campo",
+                    "description": "Charmoso buquê campestre com margaridas, lavandas e flores silvestres naturais.",
+                    "price": 65,
+                    "emoji": "🌸",
+                    "available": true
+          }
+];
+
+        let isAdminMode = false;
+        let editingBouquet = null;
+        let orders = [];
+
+        // DOM Elements
+        const adminToggle = document.getElementById('adminToggle');
+        const clientModeBtn = document.getElementById('clientModeBtn');
+        const addBouquetBtn = document.getElementById('addBouquetBtn');
+        const viewOrdersBtn = document.getElementById('viewOrdersBtn');
+        const generateCodeBtn = document.getElementById('generateCodeBtn');
+        const shareBtn = document.getElementById('shareBtn');
+        const bouquetsGrid = document.getElementById('bouquetsGrid');
+        const searchInput = document.getElementById('searchInput');
+        const priceFilter = document.getElementById('priceFilter');
+        const modal = document.getElementById('bouquetModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const bouquetForm = document.getElementById('bouquetForm');
+        const cancelBtn = document.getElementById('cancelBtn');
+        
+        // Order modal elements
+        const orderModal = document.getElementById('orderModal');
+        const orderForm = document.getElementById('orderForm');
+        const cancelOrderBtn = document.getElementById('cancelOrderBtn');
+        const deliveryType = document.getElementById('deliveryType');
+        const addressSection = document.getElementById('addressSection');
+        
+        // Orders management modal
+        const ordersModal = document.getElementById('ordersModal');
+        const closeOrdersBtn = document.getElementById('closeOrdersBtn');
+        const ordersList = document.getElementById('ordersList');
+        const noOrders = document.getElementById('noOrders');
+        
+        // Code generation modal
+        const codeModal = document.getElementById('codeModal');
+        const closeCodeBtn = document.getElementById('closeCodeBtn');
+        const copyCodeBtn = document.getElementById('copyCodeBtn');
+        const downloadCodeBtn = document.getElementById('downloadCodeBtn');
+        const generatedCode = document.getElementById('generatedCode');
+        
+        // Photo viewer modal
+        const photoModal = document.getElementById('photoModal');
+        const closePhotoBtn = document.getElementById('closePhotoBtn');
+        const photoModalImage = document.getElementById('photoModalImage');
+        const photoModalInfo = document.getElementById('photoModalInfo');
+        
+        // Share modal
+        const shareModal = document.getElementById('shareModal');
+        const closeShareBtn = document.getElementById('closeShareBtn');
+        const downloadForShare = document.getElementById('downloadForShare');
+        const copyCodeForShare = document.getElementById('copyCodeForShare');
+
+        // Event Listeners
+        adminToggle.addEventListener('click', toggleAdminMode);
+        clientModeBtn.addEventListener('click', toggleClientMode);
+        addBouquetBtn.addEventListener('click', openAddModal);
+        viewOrdersBtn.addEventListener('click', openOrdersModal);
+        generateCodeBtn.addEventListener('click', openCodeModal);
+        shareBtn.addEventListener('click', openShareModal);
+        cancelBtn.addEventListener('click', closeModal);
+        bouquetForm.addEventListener('submit', saveBouquet);
+        searchInput.addEventListener('input', filterBouquets);
+        priceFilter.addEventListener('change', filterBouquets);
+        
+        // Order form listeners
+        cancelOrderBtn.addEventListener('click', closeOrderModal);
+        orderForm.addEventListener('submit', submitOrder);
+        deliveryType.addEventListener('change', toggleAddressSection);
+        
+        // Orders modal listeners
+        closeOrdersBtn.addEventListener('click', closeOrdersModal);
+        
+        // Code modal listeners
+        closeCodeBtn.addEventListener('click', closeCodeModal);
+        copyCodeBtn.addEventListener('click', copyGeneratedCode);
+        downloadCodeBtn.addEventListener('click', downloadGeneratedCode);
+        
+        // Photo modal listeners
+        closePhotoBtn.addEventListener('click', closePhotoModal);
+        
+        // Share modal listeners
+        closeShareBtn.addEventListener('click', closeShareModal);
+        downloadForShare.addEventListener('click', downloadGeneratedCode);
+        copyCodeForShare.addEventListener('click', copyGeneratedCode);
+        
+        // Photo preview listener
+        document.getElementById('bouquetPhoto').addEventListener('change', handlePhotoUpload);
+
+        // Close modals when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        
+        orderModal.addEventListener('click', (e) => {
+            if (e.target === orderModal) closeOrderModal();
+        });
+        
+        ordersModal.addEventListener('click', (e) => {
+            if (e.target === ordersModal) closeOrdersModal();
+        });
+        
+        codeModal.addEventListener('click', (e) => {
+            if (e.target === codeModal) closeCodeModal();
+        });
+        
+        photoModal.addEventListener('click', (e) => {
+            if (e.target === photoModal) closePhotoModal();
+        });
+        
+        shareModal.addEventListener('click', (e) => {
+            if (e.target === shareModal) closeShareModal();
+        });
+
+        function toggleAdminMode() {
+            // Create mobile-friendly password modal
+            const passwordModal = document.createElement('div');
+            passwordModal.className = 'modal active';
+            passwordModal.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 max-w-sm w-full mx-4 shadow-2xl">
+                    <h3 class="font-playfair text-xl font-bold mb-6 text-gray-800 text-center">🔐 Acesso Administrativo</h3>
+                    <div class="space-y-4">
+                        <input type="password" id="adminPassword" placeholder="Digite a senha..." 
+                               class="w-full px-4 py-4 text-lg rounded-xl border border-pink-200 focus:border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-200">
+                        <div class="flex space-x-3">
+                            <button id="cancelPassword" class="flex-1 px-4 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors">
+                                Cancelar
+                            </button>
+                            <button id="confirmPassword" class="flex-1 px-4 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-xl hover:from-pink-600 hover:to-purple-600 transition-all">
+                                Entrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(passwordModal);
+            
+            const passwordInput = document.getElementById('adminPassword');
+            const confirmBtn = document.getElementById('confirmPassword');
+            const cancelBtn = document.getElementById('cancelPassword');
+            
+            // Focus on input for mobile
+            setTimeout(() => passwordInput.focus(), 100);
+            
+            function checkPassword() {
+                const password = passwordInput.value;
+                if (password === 'Liviasuper') {
+                    isAdminMode = true;
+                    document.body.classList.add('admin-mode');
+                    renderBouquets();
+                    document.body.removeChild(passwordModal);
+                    
+                    // Success message
+                    const successMsg = document.createElement('div');
+                    successMsg.className = 'fixed top-4 left-4 right-4 bg-green-500 text-white p-4 rounded-xl shadow-lg z-50 text-center';
+                    successMsg.innerHTML = '🔓 Modo administrador ativado!';
+                    document.body.appendChild(successMsg);
+                    setTimeout(() => document.body.removeChild(successMsg), 3000);
+                } else {
+                    passwordInput.value = '';
+                    passwordInput.style.borderColor = '#ef4444';
+                    passwordInput.placeholder = 'Senha incorreta! Tente novamente...';
+                    setTimeout(() => {
+                        passwordInput.style.borderColor = '';
+                        passwordInput.placeholder = 'Digite a senha...';
+                    }, 2000);
+                }
+            }
+            
+            function closePasswordModal() {
+                document.body.removeChild(passwordModal);
+            }
+            
+            confirmBtn.addEventListener('click', checkPassword);
+            cancelBtn.addEventListener('click', closePasswordModal);
+            passwordInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') checkPassword();
+            });
+            
+            // Close on outside click
+            passwordModal.addEventListener('click', (e) => {
+                if (e.target === passwordModal) closePasswordModal();
+            });
+        }
+
+        function toggleClientMode() {
+            isAdminMode = false;
+            document.body.classList.remove('admin-mode');
+            renderBouquets();
+        }
+
+        function handlePhotoUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('photoPreview');
+                    const previewImage = document.getElementById('previewImage');
+                    previewImage.src = e.target.result;
+                    preview.classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function openAddModal() {
+            editingBouquet = null;
+            modalTitle.textContent = 'Adicionar Buquê';
+            bouquetForm.reset();
+            document.getElementById('photoPreview').classList.add('hidden');
+            modal.classList.add('active');
+        }
+
+        function openEditModal(bouquet) {
+            editingBouquet = bouquet;
+            modalTitle.textContent = 'Editar Buquê';
+            
+            document.getElementById('bouquetName').value = bouquet.name;
+            document.getElementById('bouquetDescription').value = bouquet.description;
+            document.getElementById('bouquetPrice').value = bouquet.price;
+            document.getElementById('bouquetEmoji').value = bouquet.emoji;
+            
+            // Show existing photo if available
+            const preview = document.getElementById('photoPreview');
+            const previewImage = document.getElementById('previewImage');
+            if (bouquet.photo) {
+                previewImage.src = bouquet.photo;
+                preview.classList.remove('hidden');
+            } else {
+                preview.classList.add('hidden');
+            }
+            
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            editingBouquet = null;
+        }
+
+        function saveBouquet(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('bouquetName').value;
+            const description = document.getElementById('bouquetDescription').value;
+            const price = parseFloat(document.getElementById('bouquetPrice').value);
+            const emoji = document.getElementById('bouquetEmoji').value;
+            const photoFile = document.getElementById('bouquetPhoto').files[0];
+            
+            // Get photo data
+            let photoData = editingBouquet ? editingBouquet.photo : null;
+            
+            if (photoFile) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    photoData = e.target.result;
+                    saveBouquetData();
+                };
+                reader.readAsDataURL(photoFile);
+            } else {
+                saveBouquetData();
+            }
+            
+            function saveBouquetData() {
+                if (editingBouquet) {
+                    // Edit existing bouquet
+                    const index = bouquets.findIndex(b => b.id === editingBouquet.id);
+                    bouquets[index] = {
+                        ...editingBouquet,
+                        name,
+                        description,
+                        price,
+                        emoji,
+                        photo: photoData
+                    };
+                } else {
+                    // Add new bouquet
+                    const newBouquet = {
+                        id: Date.now(),
+                        name,
+                        description,
+                        price,
+                        emoji,
+                        photo: photoData,
+                        available: true
+                    };
+                    bouquets.push(newBouquet);
+                }
+
+                closeModal();
+                renderBouquets();
+                saveBouquetsToStorage();
+            }
+        }
+
+        function deleteBouquet(id) {
+            if (confirm('Tem certeza que deseja excluir este buquê?')) {
+                bouquets = bouquets.filter(b => b.id !== id);
+                renderBouquets();
+                saveBouquetsToStorage();
+            }
+        }
+
+        function createBouquetCard(bouquet) {
+            const whatsappMessage = encodeURIComponent(`Olá! Gostaria de encomendar o buquê "${bouquet.name}" por R$ ${bouquet.price.toFixed(2)} 🌸`);
+            
+            return `
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg card-hover overflow-hidden">
+                    <div class="relative">
+                        ${bouquet.photo ? 
+                            `<img src="${bouquet.photo}" alt="${bouquet.name}" class="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openPhotoModal('${bouquet.photo}', '${bouquet.name}', '${bouquet.price}', '${bouquet.emoji}')">` :
+                            `<div class="w-full h-48 bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+                                <span class="text-6xl">${bouquet.emoji}</span>
+                            </div>`
+                        }
+                        ${isAdminMode ? `
+                            <div class="absolute top-4 right-4 flex space-x-2">
+                                <button onclick="openEditModal(${JSON.stringify(bouquet).replace(/"/g, '&quot;')})" 
+                                        class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                                    ✏️
+                                </button>
+                                <button onclick="deleteBouquet(${bouquet.id})" 
+                                        class="p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                                    🗑️
+                                </button>
+                            </div>
+                        ` : ''}
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800 mb-2">${bouquet.name}</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">${bouquet.description}</p>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-2xl text-purple-600">R$ ${bouquet.price.toFixed(2)}</span>
+                            ${!isAdminMode ? `
+                                <button onclick="openOrderModal(${bouquet.id})" 
+                                   class="px-4 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm font-medium flex items-center min-h-[44px] touch-manipulation">
+                                    <span class="mr-1">🛒</span>
+                                    Pedir
+                                </button>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function filterBouquets() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const priceRange = priceFilter.value;
+            
+            let filtered = bouquets.filter(bouquet => {
+                const matchesSearch = bouquet.name.toLowerCase().includes(searchTerm) || 
+                                    bouquet.description.toLowerCase().includes(searchTerm);
+                
+                let matchesPrice = true;
+                if (priceRange) {
+                    if (priceRange === '0-100') {
+                        matchesPrice = bouquet.price <= 100;
+                    } else if (priceRange === '100-200') {
+                        matchesPrice = bouquet.price > 100 && bouquet.price <= 200;
+                    } else if (priceRange === '200+') {
+                        matchesPrice = bouquet.price > 200;
+                    }
+                }
+                
+                return matchesSearch && matchesPrice;
+            });
+            
+            renderFilteredBouquets(filtered);
+        }
+
+        function renderFilteredBouquets(filteredBouquets) {
+            bouquetsGrid.innerHTML = filteredBouquets.map(createBouquetCard).join('');
+        }
+
+        function renderBouquets() {
+            bouquetsGrid.innerHTML = bouquets.map(createBouquetCard).join('');
+        }
+
+        // Local Storage Functions
+        function saveBouquetsToStorage() {
+            try {
+                localStorage.setItem('liviasBouquets', JSON.stringify(bouquets));
+                console.log('Dados salvos com sucesso!', bouquets.length, 'buquês');
+                
+                // Show save confirmation
+                const saveMsg = document.createElement('div');
+                saveMsg.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-lg shadow-lg z-50 text-sm';
+                saveMsg.innerHTML = '💾 Dados salvos!';
+                document.body.appendChild(saveMsg);
+                setTimeout(() => {
+                    if (document.body.contains(saveMsg)) {
+                        document.body.removeChild(saveMsg);
+                    }
+                }, 2000);
+            } catch (error) {
+                console.error('Erro ao salvar:', error);
+                alert('Erro ao salvar os dados. Tente novamente.');
+            }
+        }
+
+        function loadBouquetsFromStorage() {
+            try {
+                const saved = localStorage.getItem('liviasBouquets');
+                if (saved) {
+                    const loadedBouquets = JSON.parse(saved);
+                    if (Array.isArray(loadedBouquets) && loadedBouquets.length > 0) {
+                        bouquets = loadedBouquets;
+                        console.log('Dados carregados:', bouquets.length, 'buquês');
+                        
+                        // Show load confirmation
+                        const loadMsg = document.createElement('div');
+                        loadMsg.className = 'fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-lg shadow-lg z-50 text-sm';
+                        loadMsg.innerHTML = '📂 Dados carregados!';
+                        document.body.appendChild(loadMsg);
+                        setTimeout(() => {
+                            if (document.body.contains(loadMsg)) {
+                                document.body.removeChild(loadMsg);
+                            }
+                        }, 2000);
+                    }
+                }
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+            }
+        }
+
+        // Order Management Functions
+        function openOrderModal(bouquetId) {
+            const bouquet = bouquets.find(b => b.id === bouquetId);
+            if (!bouquet) return;
+            
+            document.getElementById('selectedBouquet').innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">${bouquet.emoji}</span>
+                    <div>
+                        <h4 class="font-semibold">${bouquet.name}</h4>
+                        <p class="text-purple-600 font-bold">R$ ${bouquet.price.toFixed(2)}</p>
+                    </div>
+                </div>
+            `;
+            
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('deliveryDate').min = today;
+            document.getElementById('deliveryDate').value = today;
+            
+            orderModal.classList.add('active');
+        }
+        
+        function closeOrderModal() {
+            orderModal.classList.remove('active');
+            orderForm.reset();
+            addressSection.classList.add('hidden');
+            document.getElementById('deliveryFeeNotice').classList.add('hidden');
+        }
+        
+        function toggleAddressSection() {
+            const deliveryFeeNotice = document.getElementById('deliveryFeeNotice');
+            
+            if (deliveryType.value === 'entrega') {
+                addressSection.classList.remove('hidden');
+                deliveryFeeNotice.classList.remove('hidden');
+                document.getElementById('deliveryAddress').required = true;
+            } else {
+                addressSection.classList.add('hidden');
+                deliveryFeeNotice.classList.add('hidden');
+                document.getElementById('deliveryAddress').required = false;
+            }
+        }
+        
+        function submitOrder(e) {
+            e.preventDefault();
+            
+            const bouquetId = parseInt(document.getElementById('selectedBouquet').querySelector('h4').textContent);
+            const bouquet = bouquets.find(b => b.name === document.getElementById('selectedBouquet').querySelector('h4').textContent);
+            
+            const orderData = {
+                id: Date.now(),
+                bouquet: bouquet,
+                customerName: document.getElementById('customerName').value,
+                customerPhone: document.getElementById('customerPhone').value,
+                deliveryType: document.getElementById('deliveryType').value,
+                deliveryAddress: document.getElementById('deliveryAddress').value,
+                deliveryDate: document.getElementById('deliveryDate').value,
+                orderNotes: document.getElementById('orderNotes').value,
+                orderTime: new Date().toLocaleString('pt-BR'),
+                status: 'pending'
+            };
+            
+            // Add to orders list
+            orders.push(orderData);
+            saveOrdersToStorage();
+            
+            // Create WhatsApp message
+            let message = `🌸 *NOVO PEDIDO - Buquês da Lívia*\n\n`;
+            message += `👤 *Cliente:* ${orderData.customerName}\n`;
+            message += `📱 *Contato:* ${orderData.customerPhone}\n`;
+            message += `💐 *Buquê:* ${orderData.bouquet.name}\n`;
+            message += `💰 *Valor do Buquê:* R$ ${orderData.bouquet.price.toFixed(2)}\n`;
+            
+            if (orderData.deliveryType === 'entrega') {
+                message += `🚚 *Entrega em:* ${orderData.deliveryAddress}\n`;
+                message += `💰 *Taxa de Entrega:* R$ 4,00\n`;
+                message += `💵 *VALOR TOTAL:* R$ ${(orderData.bouquet.price + 4.00).toFixed(2)}\n`;
+            } else {
+                message += `🏪 *Retirada na loja (Grátis)*\n`;
+                message += `💵 *VALOR TOTAL:* R$ ${orderData.bouquet.price.toFixed(2)}\n`;
+            }
+            
+            message += `📅 *Data:* ${new Date(orderData.deliveryDate).toLocaleDateString('pt-BR')}\n`;
+            
+            if (orderData.orderNotes) {
+                message += `📝 *Observações:* ${orderData.orderNotes}\n`;
+            }
+            
+            message += `\n⏰ *Pedido feito em:* ${orderData.orderTime}`;
+            
+            // Open WhatsApp using enhanced compatibility function
+            const whatsappUrl = `https://wa.me/+5566992818222?text=${encodeURIComponent(message)}`;
+            openWhatsAppLink(whatsappUrl);
+            
+            closeOrderModal();
+            
+            // Show success message
+            const successMsg = document.createElement('div');
+            successMsg.className = 'fixed top-4 left-4 right-4 bg-green-500 text-white p-4 rounded-xl shadow-lg z-50 text-center';
+            successMsg.innerHTML = '✅ Pedido enviado! Aguarde nosso contato.';
+            document.body.appendChild(successMsg);
+            setTimeout(() => {
+                if (document.body.contains(successMsg)) {
+                    document.body.removeChild(successMsg);
+                }
+            }, 4000);
+        }
+        
+        // Orders Management Functions
+        function openOrdersModal() {
+            renderOrdersList();
+            ordersModal.classList.add('active');
+        }
+        
+        function closeOrdersModal() {
+            ordersModal.classList.remove('active');
+        }
+        
+        function renderOrdersList() {
+            const today = new Date().toDateString();
+            const todayOrders = orders.filter(order => {
+                const orderDate = new Date(order.orderTime).toDateString();
+                return orderDate === today && order.status === 'pending';
+            });
+            
+            if (todayOrders.length === 0) {
+                ordersList.classList.add('hidden');
+                noOrders.classList.remove('hidden');
+                return;
+            }
+            
+            ordersList.classList.remove('hidden');
+            noOrders.classList.add('hidden');
+            
+            ordersList.innerHTML = todayOrders.map(order => `
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-2xl">${order.bouquet.emoji}</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">${order.customerName}</h4>
+                                <p class="text-gray-600">${order.customerPhone}</p>
+                            </div>
+                        </div>
+                        <button onclick="completeOrder(${order.id})" 
+                                class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm">
+                            ✅ Concluído
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p><strong>Buquê:</strong> ${order.bouquet.name}</p>
+                            <p><strong>Valor:</strong> R$ ${order.bouquet.price.toFixed(2)}</p>
+                            <p><strong>Data:</strong> ${new Date(order.deliveryDate).toLocaleDateString('pt-BR')}</p>
+                        </div>
+                        <div>
+                            <p><strong>Entrega:</strong> ${order.deliveryType === 'entrega' ? '🚚 Delivery' : '🏪 Retirada'}</p>
+                            ${order.deliveryType === 'entrega' ? `<p><strong>Endereço:</strong> ${order.deliveryAddress}</p>` : ''}
+                            <p><strong>Pedido:</strong> ${order.orderTime}</p>
+                        </div>
+                    </div>
+                    
+                    ${order.orderNotes ? `
+                        <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
+                            <p class="text-sm"><strong>Observações:</strong> ${order.orderNotes}</p>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+        
+        function completeOrder(orderId) {
+            const orderIndex = orders.findIndex(o => o.id === orderId);
+            if (orderIndex !== -1) {
+                orders[orderIndex].status = 'completed';
+                saveOrdersToStorage();
+                renderOrdersList();
+                
+                // Show success message
+                const successMsg = document.createElement('div');
+                successMsg.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-lg shadow-lg z-50 text-sm';
+                successMsg.innerHTML = '✅ Pedido concluído!';
+                document.body.appendChild(successMsg);
+                setTimeout(() => {
+                    if (document.body.contains(successMsg)) {
+                        document.body.removeChild(successMsg);
+                    }
+                }, 2000);
+            }
+        }
+        
+        // Code Generation Functions
+        function openCodeModal() {
+            const currentCode = generateUpdatedCode();
+            generatedCode.value = currentCode;
+            codeModal.classList.add('active');
+            
+            // Auto-copy code when modal opens
+            setTimeout(() => {
+                copyGeneratedCode();
+            }, 500);
+        }
+        
+        function closeCodeModal() {
+            codeModal.classList.remove('active');
+        }
+        
+        function generateUpdatedCode() {
+            const bouquetsJson = JSON.stringify(bouquets, null, 12);
+            
+            // Get the current HTML and replace the bouquets array
+            const currentHTML = document.documentElement.outerHTML;
+            const bouquetsRegex = /let bouquets = \[[\s\S]*?\];/;
+            const updatedHTML = currentHTML.replace(bouquetsRegex, `let bouquets = ${bouquetsJson};`);
+            
+            return updatedHTML;
+        }
+        
+        function copyGeneratedCode() {
+            generatedCode.select();
+            document.execCommand('copy');
+            
+            const successMsg = document.createElement('div');
+            successMsg.className = 'fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-lg shadow-lg z-50 text-sm';
+            successMsg.innerHTML = '📋 Código copiado!';
+            document.body.appendChild(successMsg);
+            setTimeout(() => {
+                if (document.body.contains(successMsg)) {
+                    document.body.removeChild(successMsg);
+                }
+            }, 2000);
+        }
+        
+        function downloadGeneratedCode() {
+            const code = generatedCode.value;
+            const blob = new Blob([code], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `catalogo-buques-livia-${new Date().toISOString().split('T')[0]}.html`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            const successMsg = document.createElement('div');
+            successMsg.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-lg shadow-lg z-50 text-sm';
+            successMsg.innerHTML = '💾 Arquivo baixado!';
+            document.body.appendChild(successMsg);
+            setTimeout(() => {
+                if (document.body.contains(successMsg)) {
+                    document.body.removeChild(successMsg);
+                }
+            }, 2000);
+        }
+        
+        // WhatsApp Helper Function - Universal Compatibility
+        function openWhatsAppLink(url) {
+            // Extract phone and message from URL
+            const phoneMatch = url.match(/wa\.me\/([+\d]+)/);
+            const phone = phoneMatch ? phoneMatch[1] : '+5566992818222';
+            const urlParams = new URLSearchParams(url.split('?')[1] || '');
+            const text = urlParams.get('text') || '';
+            
+            // Show confirmation message
+            showWhatsAppMessage();
+            
+            // Multiple fallback strategies for maximum compatibility
+            const strategies = [
+                // Strategy 1: WhatsApp app protocol (most direct)
+                () => {
+                    const appUrl = `whatsapp://send?phone=${phone}&text=${encodeURIComponent(text)}`;
+                    window.location.href = appUrl;
+                },
+                
+                // Strategy 2: wa.me with window.open
+                () => {
+                    const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+                    window.open(waUrl, '_blank');
+                },
+                
+                // Strategy 3: web.whatsapp.com
+                () => {
+                    const webUrl = `https://web.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
+                    window.open(webUrl, '_blank');
+                }
+            ];
+            
+            // Try strategies with delays
+            let strategyIndex = 0;
+            
+            function tryNextStrategy() {
+                if (strategyIndex < strategies.length) {
+                    try {
+                        strategies[strategyIndex]();
+                        strategyIndex++;
+                        
+                        // If still on page after 1.5 seconds, try next strategy
+                        setTimeout(() => {
+                            if (document.visibilityState === 'visible' && strategyIndex < strategies.length) {
+                                tryNextStrategy();
+                            } else if (document.visibilityState === 'visible' && strategyIndex >= strategies.length) {
+                                // All strategies failed, show manual instructions
+                                showManualInstructions(phone, text);
+                            }
+                        }, 1500);
+                        
+                    } catch (error) {
+                        // Strategy failed, try next one immediately
+                        strategyIndex++;
+                        if (strategyIndex < strategies.length) {
+                            setTimeout(tryNextStrategy, 100);
+                        } else {
+                            showManualInstructions(phone, text);
+                        }
+                    }
+                } else {
+                    // All strategies exhausted
+                    showManualInstructions(phone, text);
+                }
+            }
+            
+            // Start trying strategies
+            tryNextStrategy();
+        }
+        
+        function showWhatsAppMessage() {
+            const msg = document.createElement('div');
+            msg.className = 'fixed top-4 left-4 right-4 bg-green-500 text-white p-4 rounded-xl shadow-lg z-50 text-center';
+            msg.innerHTML = '📱 Abrindo WhatsApp...';
+            document.body.appendChild(msg);
+            
+            setTimeout(() => {
+                if (document.body.contains(msg)) {
+                    document.body.removeChild(msg);
+                }
+            }, 3000);
+        }
+        
+        function showManualInstructions(phone, text) {
+            const modal = document.createElement('div');
+            modal.className = 'modal active';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl">
+                    <h3 class="font-playfair text-xl font-bold mb-4 text-gray-800 text-center">📱 Abrir WhatsApp</h3>
+                    <div class="space-y-4 text-center">
+                        <p class="text-gray-600">Copie a mensagem abaixo e cole no WhatsApp:</p>
+                        <div class="bg-gray-50 p-4 rounded-xl">
+                            <p class="text-sm font-mono break-words" id="messageText">${text}</p>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button id="copyMessage" class="flex-1 px-4 py-3 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-colors">
+                                📋 Copiar Mensagem
+                            </button>
+                            <button id="openWhatsApp" class="flex-1 px-4 py-3 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-colors">
+                                📱 Abrir WhatsApp
+                            </button>
+                        </div>
+                        <button id="closeInstructions" class="w-full px-4 py-2 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors">
+                            Fechar
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Event listeners
+            document.getElementById('copyMessage').addEventListener('click', () => {
+                navigator.clipboard.writeText(text).then(() => {
+                    const btn = document.getElementById('copyMessage');
+                    btn.innerHTML = '✅ Copiado!';
+                    btn.classList.add('bg-green-500');
+                    setTimeout(() => {
+                        btn.innerHTML = '📋 Copiar Mensagem';
+                        btn.classList.remove('bg-green-500');
+                    }, 2000);
+                });
+            });
+            
+            document.getElementById('openWhatsApp').addEventListener('click', () => {
+                window.open(`https://wa.me/${phone}`, '_blank');
+            });
+            
+            document.getElementById('closeInstructions').addEventListener('click', () => {
+                document.body.removeChild(modal);
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    document.body.removeChild(modal);
+                }
+            });
+        }
+
+        // Photo Modal Functions
+        function openPhotoModal(photoSrc, name, price, emoji) {
+            photoModalImage.src = photoSrc;
+            photoModalInfo.innerHTML = `
+                <div class="flex items-center justify-center space-x-3">
+                    <span class="text-3xl">${emoji}</span>
+                    <div>
+                        <h3 class="font-playfair text-xl font-semibold text-gray-800">${name}</h3>
+                        <p class="text-purple-600 font-bold text-lg">R$ ${parseFloat(price).toFixed(2)}</p>
+                    </div>
+                </div>
+            `;
+            photoModal.classList.add('active');
+        }
+        
+        function closePhotoModal() {
+            photoModal.classList.remove('active');
+        }
+
+        // Share Modal Functions
+        function openShareModal() {
+            shareModal.classList.add('active');
+        }
+        
+        function closeShareModal() {
+            shareModal.classList.remove('active');
+        }
+
+        // Storage Functions for Orders
+        function saveOrdersToStorage() {
+            try {
+                localStorage.setItem('liviasBouquetsOrders', JSON.stringify(orders));
+            } catch (error) {
+                console.error('Erro ao salvar pedidos:', error);
+            }
+        }
+        
+        function loadOrdersFromStorage() {
+            try {
+                const saved = localStorage.getItem('liviasBouquetsOrders');
+                if (saved) {
+                    orders = JSON.parse(saved);
+                }
+            } catch (error) {
+                console.error('Erro ao carregar pedidos:', error);
+            }
+        }
+
+        // Load saved data on page load
+        loadBouquetsFromStorage();
+        loadOrdersFromStorage();
+
+        // Initial render
+        renderBouquets();
+
+        // Auto-save every 30 seconds as backup
+        setInterval(() => {
+            if (bouquets.length > 0) {
+                saveBouquetsToStorage();
+            }
+        }, 30000);
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9597c6e40482f200',t:'MTc1MTU2MDMyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+
+<div class="fixed top-4 left-4 right-4 bg-green-500 text-white p-4 rounded-xl shadow-lg z-50 text-center">🔓 Modo administrador ativado!</div></body></html>
